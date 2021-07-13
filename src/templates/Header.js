@@ -1,5 +1,3 @@
-import Home from "../pages/Home";
-
 const Header = () => {
   const view = `
     <div class="header-main">
@@ -17,7 +15,6 @@ const Header = () => {
       </div>
     </div>
   `;
-
   return view;
 };
 

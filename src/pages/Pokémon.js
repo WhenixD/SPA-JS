@@ -3,9 +3,7 @@ const Pokémon = () => {
     <div class="pokémon-inner">
       <article class="pokémon-card">
         <img src="image" alt="name">
-        <h2>
-          Name
-        </h2>
+        <h2>Name</h2>
       </article>
       <article class="pokémon-card">
         <h3>Types:</h3>

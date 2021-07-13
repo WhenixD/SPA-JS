@@ -8,7 +8,7 @@ module.exports = {
     filename: "main.js",
   },
   resolve: {
-    extensions: ["js"],
+    extensions: [".js"],
   },
   module: {
     rules: [
@@ -22,12 +22,10 @@ module.exports = {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin([
-      {
-        inject: true,
-        template: "./public/index.html",
-        filename: "./index.html",
-      },
-    ]),
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: "./public/index.html",
+      filename: "./index.html",
+    }),
   ],
 };
