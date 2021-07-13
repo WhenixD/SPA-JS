@@ -3,7 +3,7 @@ const resolveRoutes = (route) => {
     let validRoute = route === "/" ? route : "/:id";
     return validRoute;
   }
-  return route;
+  return `/${route}`;
 };
 
 export default resolveRoutes;
