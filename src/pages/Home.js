@@ -1,6 +1,5 @@
 import getPokémon from "../utils/getPokémon";
 
-const API = "https://pokeapi.co/api/v2/pokemon/";
 const pokémonLimit = 50;
 let pokémonList = [];
 
