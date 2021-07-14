@@ -1,6 +1,7 @@
 import getPokémon from "../utils/getPokémon";
 
-const pokémonLimit = 10;
+const API = "https://pokeapi.co/api/v2/pokemon/";
+const pokémonLimit = 50;
 let pokémonList = [];
 
 const Home = async () => {
@@ -10,16 +11,30 @@ const Home = async () => {
   }
   const viewPokémon = `
       <div class="pokémon">
-      ${pokémonList.map(
-        (pokémonList) => `
+      ${pokémonList
+        .map(
+          (pokémonList) => `
         <article class="pokémon-item">
-          <a href="#/${pokémonList.id}/">
-            <img src="${pokémonList.sprites.front_default}" alt="${pokémonList.name}">
+          <a href="/#/${pokémonList.id}">
+            <img src="${pokémonList.sprites.front_default}" alt="${
+            pokémonList.name
+          }">
             <h2>${pokémonList.name}</h2>
+            <div class="pokémon-type">
+            <h3>
+              ${pokémonList.types[0].type.name}
+            </h3>
+              ${
+                pokémonList.types[1]
+                  ? `<h3>${pokémonList.types[1].type.name}</h3>`
+                  : ``
+              }
+              </div>
           </a>
         </article>
         `
-      ).join("")}
+        )
+        .join("")}
       </div>
     `;
   return viewPokémon;
