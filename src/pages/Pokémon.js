@@ -7,7 +7,7 @@ const Pokémon = () => {
       </article>
       <article class="pokémon-card">
         <h3>Types:</h3>
-        <h3>Order:</h3>
+        <h3>Number:</h3>
         <h3>Weight:</h3>
       </article>
     </div>
