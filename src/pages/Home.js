@@ -32,6 +32,7 @@ const Home = async () => {
               </div>
           </a>
         </article>
+        <hr />
         `
         )
         .join("")}
