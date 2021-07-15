@@ -1,10 +1,11 @@
-import getHash from "../utils/getHash";
-import getPokémon from "../utils/getPokémon";
+import getHash from '../utils/getHash';
+import getPokémon from '../utils/getPokémon';
+import firstToUpper from '../utils/toUpper';
 
 const Pokémon = async () => {
-  const id = getHash();
-  const pokémon = await getPokémon(id);
-  const view = `
+	const id = getHash();
+	const pokémon = await getPokémon(id);
+	const view = `
     <div class="pokémon-inner">
       <article class="pokémon-card">
         <img src="${pokémon.sprites.front_default}" alt="${pokémon.name}">
@@ -12,7 +13,7 @@ const Pokémon = async () => {
           Name
         </h2>
         <span>
-          ${pokémon.name}
+          ${firstToUpper(pokémon.name)}
         </span>
       </article>
       <article class="pokémon-card">
@@ -26,11 +27,9 @@ const Pokémon = async () => {
           Types:
         </h3>
           <span>
-            ${pokémon.types[0].type.name}
+            ${firstToUpper(pokémon.types[0].type.name)}
           </span>
-          ${
-            pokémon.types[1] ? `<span>${pokémon.types[1].type.name}</span>` : ``
-          } 
+          ${pokémon.types[1] ? `<span>${firstToUpper(pokémon.types[1].type.name)}</span>` : ``} 
         <h3>
           Weight: 
         </h3>
@@ -40,7 +39,7 @@ const Pokémon = async () => {
       </article>
     </div>
   `;
-  return view;
+	return view;
 };
 
 export default Pokémon;
