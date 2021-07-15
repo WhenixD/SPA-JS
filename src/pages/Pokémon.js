@@ -7,35 +7,42 @@ const Pokémon = async () => {
 	const pokémon = await getPokémon(id);
 	const view = `
     <div class="pokémon-inner">
-      <article class="pokémon-card">
-        <img src="${pokémon.sprites.front_default}" alt="${pokémon.name}">
+      <article class="pokémon-card item-${pokémon.types[0].type.name}">
+        <div class="img-container">
+          <img src="${pokémon.sprites.front_default}" alt="${pokémon.name}">
+        </div>
         <h2>
           Name
         </h2>
-        <span>
+        <h3>
           ${firstToUpper(pokémon.name)}
-        </span>
+        </h3>
       </article>
-      <article class="pokémon-card">
+      <article class="pokémon-card item-${pokémon.types[0].type.name}">
         <h3>
           Number: 
         </h3>
-          <span>
-            ${pokémon.id}
+          <span class="number">
+            #${pokémon.id.toString().padStart(3, '0')}
           </span>
         <h3>
           Types:
         </h3>
-          <span>
+        <div class="pokémon-type">
+          <span class="type-${pokémon.types[0].type.name}">
             ${firstToUpper(pokémon.types[0].type.name)}
           </span>
-          ${pokémon.types[1] ? `<span>${firstToUpper(pokémon.types[1].type.name)}</span>` : ``} 
+          ${pokémon.types[1]
+				? `<span class="type-${pokémon.types[1].type.name}">${firstToUpper(pokémon.types[1].type.name)}</span>`
+				: ``} 
+        </div>
         <h3>
-          Weight: 
+          Abilities: 
         </h3>
-            <span>
-              ${pokémon.weight}
-            </span>
+            <h4>
+              ${firstToUpper(pokémon.abilities[0].ability.name)}
+            </h4>
+            ${pokémon.abilities[1] ? `<h4>${firstToUpper(pokémon.abilities[1].ability.name)}</h4>` : ``}
       </article>
     </div>
   `;
