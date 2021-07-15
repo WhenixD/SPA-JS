@@ -347,3 +347,25 @@ a:visited {
 .type-fairy {
 	background-color: #d574ad;
 }
+
+@media only screen and (min-width: 320px) {
+	.pokémon {
+		display: block;
+	}
+
+	.pokémon-item {
+		margin: 50px 0;
+	}
+}
+
+@media only screen and (min-width: 860px) {
+	.pokémon {
+		display: grid;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.pokémon-item {
+		margin: 10px;
+	}
+}
