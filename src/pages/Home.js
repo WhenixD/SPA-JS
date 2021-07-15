@@ -16,7 +16,7 @@ const Home = async () => {
 				(pokémonList) =>
 					`
         <article class="pokémon-item item-${pokémonList.types[0].type.name}">
-          <a href="/#/${pokémonList.id}">
+          <a href="SPA-JS/#/${pokémonList.id}">
             <div class="img-container">
               <img src="${pokémonList.sprites.front_default}" alt="${firstToUpper(pokémonList.name)}">
             </div>
