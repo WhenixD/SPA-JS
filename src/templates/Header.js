@@ -3,8 +3,8 @@ const Header = () => {
     <div class="header-main">
       <div class="header-logo">
         <h1>
-          <a href="/SPA-JS">
-            Pokidex.co
+          <a href="#">
+            Pokídex.co
           </a>
         </h1>
       </div>
