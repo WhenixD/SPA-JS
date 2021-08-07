@@ -1,7 +1,7 @@
 import getPokémon from '../utils/getPokémon';
 import firstToUpper from '../utils/toUpper';
 
-const pokémonLimit = 10;
+const pokémonLimit = 151;
 let pokémonList = [];
 
 const Home = async () => {
