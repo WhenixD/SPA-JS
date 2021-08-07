@@ -154,15 +154,14 @@ a:visited {
 }
 
 .pokémon-type {
-	width: 145px;
+	width: 125px;
 	margin: 0 auto;
 	display: flex;
-	justify-content: center;
+	justify-content: space-evenly;
 }
 
-.separator {
-	width: 30px;
-	height: 1px;
+.pokémon-type__margin {
+	margin: auto 7.5px;
 }
 
 .pokémon-item h3 {
