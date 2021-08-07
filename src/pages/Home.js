@@ -1,7 +1,7 @@
 import getPokémon from '../utils/getPokémon';
 import firstToUpper from '../utils/toUpper';
 
-const pokémonLimit = 151;
+const pokémonLimit = 10;
 let pokémonList = [];
 
 const Home = async () => {
@@ -27,12 +27,12 @@ const Home = async () => {
             </span>
             <h2>${firstToUpper(pokémonList.name)}</h2>
             <div class="pokémon-type">
-            <h3 class="type-${pokémonList.types[0].type.name}">
+            <h3 class="pokémon-type__margin type-${pokémonList.types[0].type.name}">
               ${firstToUpper(pokémonList.types[0].type.name)}
             </h3>
               ${
                 pokémonList.types[1]
-                  ? `<div class="separator"></div><h3 class="type-${
+                  ? `<h3 class="type-${
                       pokémonList.types[1].type.name
                     }">${firstToUpper(pokémonList.types[1].type.name)}</h3>`
                   : ''
@@ -45,7 +45,6 @@ const Home = async () => {
         .join('')}
       </div>
     `;
-
   return viewPokémon;
 };
 
